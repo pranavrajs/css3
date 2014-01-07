@@ -1,0 +1,10 @@
+#cyclewrap{position:relative;
+left:-150px;
+
+width:545px;}
+#cyclewrap .cycleprev, #cyclewrap .cyclenext{display:block;position:absolute;width:32px;height:32px;top:150px;z-index:9999;text-decoration:none;}
+#cyclewrap .cycleprev{left:0;background:url(img/img-prev.png) no-repeat top left;}
+#cyclewrap .cyclenext{right:0;background:url(img/img-next.png) no-repeat top left;}
+#cyclewrapnav a{background:transparent url(img/pagenav.png) no-repeat 0 0 ; float:left; height:15px; overflow:hidden; text-decoration:none; text-indent:-1234px; width:16px;}
+#cyclewrapnav a.activeSlide {background-position:-32px 0;}
+#cycleimages{position: relative;}

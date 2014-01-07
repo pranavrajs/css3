@@ -1,0 +1,235 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/tinomenu.js"></script>
+<link rel="stylesheet" type="text/css" href="css/tinomenu.css" >
+<link rel="stylesheet" type="text/css" href="sdmenu/sdmenu.css" >
+<script type="text/javascript" src="sdmenu/sdmenu.js">
+</script>
+<script type="text/javascript">
+var myMenu;
+window.onload = function()
+{
+myMenu = new SDMenu("my_menu");	 myMenu.init();
+};
+</script>
+<script type="text/javascript" src="js/jquery.jticker.js"></script>
+<script type="text/javascript">
+<!--
+jQuery(document).ready(function(){
+jQuery("#ticker").ticker({
+cursorList: " ",
+rate: 10,
+delay: 4000
+}).trigger("play").trigger("stop");
+jQuery(".stop").click(function(){
+jQuery("#ticker").trigger("stop");
+return false;
+});
+jQuery(".play").click(function(){
+jQuery("#ticker").trigger("play");
+return false;
+});
+jQuery(".speedup").click(function(){
+jQuery("#ticker")
+.trigger({
+type: "control",
+item: 0,
+rate: 1,
+delay: 4000
+})
+return false;
+});
+jQuery(".slowdown").click(function(){
+jQuery("#ticker")
+.trigger({
+type: "control",
+item: 0,
+rate: 9,
+delay: 8000
+})
+return false;
+});
+jQuery(".next").live("click", function(){
+jQuery("#ticker")
+.trigger({type: "play"})
+.trigger({type: "stop"});
+return false;
+});
+jQuery(".style").click(function(){
+jQuery("#ticker")
+.trigger({
+type: "control",
+cursor: jQuery("#ticker").data("ticker").cursor.css({width: "4em", background: "#efefef", position: "relative", top: "1em", left: "-1em"})
+})
+return false;
+});
+});
+//-->
+</script>
+<style type ="text/css">
+body
+{
+font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+}
+#div1
+{
+width:1200px;
+height:200px;
+padding:2px;
+position:relative;
+left:6%;
+text-align:center;}
+#div2
+{
+width:1200px;
+height:500px;
+background-color:#4B7BBF;
+border-radius:10px;
+font-size:14px;
+font-color:#D1D1D1;
+position :relative;
+left:6%;
+text-align:center;}
+#div3
+{
+
+position :relative;
+left:6%;
+width:1200px;
+height:50px;
+padding:5px;
+font-size:13px;
+font-color:#D1D1D1;
+text-align:center;
+}
+#div4
+{
+padding:10px;
+width:180px;
+height:450px;
+float:left;
+}
+#div5
+{
+padding:5px;
+width:75%;
+height:450px;
+position:relative;
+left:20%;
+color:#fff;
+border-color:#FFFFFF;
+border-style:solid;
+border-radius:10px;
+text-padding:10px;
+text-align:left;}
+a
+{
+text-decoration:none;
+}
+
+a:link
+{
+color:#000;
+}
+a:visited
+{
+color:#000;
+}
+#ticker
+{height: 12em; padding:0 0; margin: 0 0 0 0;  position: relative; top:10px;}
+#ticker .cursor
+{display: inline-block; background: #565c61; width: 0.6em; height: 1em; text-align: center;}
+#ticker p
+{margin-bottom: 0.8em;}
+#ticker code
+{margin: 0.4em 0.4em; display: block;}
+#ticker .next
+{position: absolute; left:8em;bottom: 1em;}
+</style>
+<title>Tinozza</title>
+<meta name="Description" content="Tinozza are leading Importer of Sanitary wares in India. We are committed to continuous improvement in our products and services through advanced technology, meaningful resource management, installation of quality development systems of international standards and reviewing quality objectives for customer values.Tinozza India
+Inspired By Future" >
+<meta name="Keywords" content="Tinozza , leading Importer of Sanitary wares in India, Importer of Sanitary wares,Inspired By Future" >
+</head>
+<body>
+<div id="div1">
+<img src ="img/title.jpg" height="130px" width ="350px" alt="tinozza_main">
+<hr>
+<ul id="gooeymenu4" class="framemenu">
+<li><a href="home.htm">Home</a></li>
+<li><a href="prod.htm">Products</a></li>
+<li><a href="enquiry.htm">Enquiry</a></li>
+<li><a href="dwnlds.htm">Downloads</a></li>
+<li><a href="services.htm">Services</a></li>
+<li><a href="cts.htm">Contact Us</a></li>
+</ul>
+<hr>
+</div>
+<script type="text/javascript">
+gooeymenu.setup({id:'gooeymenu4', snapdelay:500})
+</script>
+<div id="div2">
+<br>
+<div id="div4">
+<div style="float: left" id="my_menu" class="sdmenu">
+<div>
+<span>Home</span>
+<a href="home.htm">Home</a>
+</div>
+<div>
+<div>
+<span>Products</span>
+<a href="prod.htm">Shower Cubicle</a>
+</div></div>
+<div>
+<span>Enquiry</span>
+<a href="enquiry.htm">Enquiry</a>
+</div>
+<div>
+<span>Downloads</span>
+<a href="dwnlds.htm">Download Brochure</a>
+</div>
+<div>
+<span>Services</span>
+<a href="services.htm">Services</a>
+</div>
+<div>
+<span>Contact Us</span><a href="dealers.htm">Where to buy</a>
+<a href="cts.htm">Contact Us</a>
+<a href="fls.htm">Follow Us</a>
+</div>
+</div>
+</div>
+<div id="div5">
+<div id="content">
+<h1>Tinozza India <br> </h1><h3>Inspired By Future</h3>
+<div id="ticker">
+<div>
+<h3>About Tinozza</h3>
+<p>We are leading Importer of Sanitary wares in India. We are committed to continuous improvement in our products and services through advanced technology, meaningful resource management, installation of quality development systems of international standards and reviewing quality objectives for customer values.</p>
+<a class="next" href="#">next</a>
+</div>
+<div>
+<h3>About Tinozza</h3>
+<p>For a royal bath experience use Tinozza Products..</p>
+<a class="next" href="#">next</a>
+</div>
+</div>
+<h3>Tinozza-Care</h3>
+Feel free to contact us :<br>
+email : customercare@tinozza.com<br>
+ph.no.:9400304650
+</div>
+</div>
+</div>
+<div id="div3">
+<p>Copyright Reseved © Tinozza-India. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designed &amp; Developed by <a href="http://tayberrycreative.in/">Tayberry Creative</a>. <br>For a better view use Google Chrome or Mozilla Firefox<br></p>
+<a href ="https://www.facebook.com/pages/Tinozza-India/199025266857870"><img src="img/fb.png" width="30px" height="30px" alt="fb"></a>
+<a href ="#"><img src="img/blog.png" width="30px" height="30px" alt ="blog"></a>
+<a href ="https://www.twitter.com/tinozzaindia"><img src="img/twitter.png" width="30px" height="30px" alt="twitter" ></a>
+</div>
+</body>
+</html>
