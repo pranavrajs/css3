@@ -50,7 +50,7 @@
            
             <li><a><i class="fa fa-sitemap"></i> Asset Master<span class="fa fa-chevron-circle-right"></span></a>
               <ul>
-               <li><a href="#/add-asset"><i class="fa fa-plus-square-o"></i> Add Assets</a></li>  
+               <li><a href="#add-asset"><i class="fa fa-plus-square-o"></i> Add Assets</a></li>  
                <li><a href="#"><i class="fa fa-trash-o"></i> Remove Assets</a></li>  
                <li><a href="#"><i class="fa fa-reorder"></i> List all Assets</a></li>  
                <li><a href="#movement-history"><i class="fa fa-truck"></i>Movement History</a></li>  
@@ -77,7 +77,69 @@
 
         <!-- Content Container -->
         <div class="content-container col-lg-9 col-md-9 col-sm-10 col-xs-12">
-           <div ng-view></div>
+                       <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/e9421181788/integration/bootstrap/3/dataTables.bootstrap.css">
+  
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a >Asset Master</a></li>
+              <li class="active">Movement History</li>
+            </ol>
+            <!-- Asset Details -->
+            <div class="col-lg-12">
+              <div class="panel panel-default" style="border-radius:0px;">
+                <div class="panel-heading movement-history"><h3>ASSET DETAILS</h3></div>
+                <div class="panel-body">
+                    <div class="col-lg-12 asset-details">
+                          <div class="col-md-6 left-asset-move">
+
+                              <p><strong>Asset Tag: </strong> TD#1253 </p>
+                              <p><strong>Asset Name: </strong> Dell Inspiron v1</p>
+                              <p><strong>Order No: </strong> #1242 </p>
+                              <p><strong>Model No: </strong> SVE14113 </p>
+                              <p><strong>Latest Owner :</strong>
+                                <p class="left-asset-move-p col-md-6">
+                                  <img src="img/profile.jpg"/ style="width:50px;height:50px;">
+                                  <span><b>Pranav Raj S</b>
+                                        <br>UI/UX Designer
+                                        <br>#421313
+                                  </span>
+
+                                </p>
+                              </p>
+                          </div>
+                          <div class="col-md-6 right-asset-move">
+
+                              <p><strong>Notes : </strong> <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p></p>        
+                          </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- Table showing movement history -->
+                        <div class="col-lg-12">
+              <div class="panel panel-default" style="border-radius:0px;">
+                <div class="panel-heading movement-history"><h3>MOVEMENT HISTORY</h3></div>
+                <div class="panel-body">
+                    <table class="table table-bordered" id="movement-table">
+                        <thead>
+                          <th>Movement Date</th>
+                          <th>Location</th>
+                          <th>Floor</th>
+                          <th>Zone</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2013-12</td>
+                            <td>Kinfra</td>
+                            <td>Second</td>
+                            <td>Zone3</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
