@@ -1,0 +1,21 @@
+<?php
+
+class Model extends CI_Model {
+
+public function __construct() {
+    parent::__construct(); $this->load->database();
+}
+
+public function add_roadster()
+	{
+		$data=array(
+			'name'=>$this->input->post('name'),
+			'email'=>$this->input->post('email'),
+			'age'=>$this->input->post('age'),
+			'phone'=>$this->input->post('phone'),
+			'q1'=>$this->input->post('q1'),
+			'q2'=>$this->input->post('q2')
+				);
+		$this->db->insert('tedx',$data);
+	}
+}

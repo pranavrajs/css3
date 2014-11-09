@@ -1,0 +1,40 @@
+
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+
+
+}
+
+a {
+	color: #aaa;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+.icon-drop:before, 
+.icon-arrow-left:before {
+	font-family: 'fontawesome';
+	position: absolute;
+	top: 0;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #47a3da;
+	-webkit-font-smoothing: antialiased;
+	padding-left: 8px;
+}
+
+.icon-drop:before {
+	content: "\e000";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}
+

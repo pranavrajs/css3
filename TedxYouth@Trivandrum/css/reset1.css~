@@ -1,0 +1,52 @@
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote, q {
+  quotes: "&#8220;" "&#8221;";
+}
+
+.clear {
+  clear: both;
+}
+
+.left { 
+  float: left;
+}
+
+.right { 
+  float: right;
+}
+
+.bold { 
+  font-weight: bold;
+}
+
+.italic { 
+  font-style: italic;
+}
+
+.bullet { 
+  list-style: circle;
+}
+
+.hide {
+  display: none;
+}
