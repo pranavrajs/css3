@@ -1,45 +1,310 @@
 <html>
-  	<title>Placeholder Template -D'signerWall</title>
-		<head>
-				
-				<link rel='stylesheet' type='text/css' href='css/style.css'>
-				<link href='http://fonts.googleapis.com/css?family=Exo:400,600' rel='stylesheet' type='text/css'>
-		</head>	
-		<body>
-			<div id="container">
-					<div id="leftslope">
-							<p> &nbsp; &nbsp; &nbsp;A <br/>SIMPLE DESIGN</p>		
-					</div>	
-					<div id="circle">
-							<div id="inside_circle">
-								<img src="images/logo.jpg" alt="logo" />
-							</div>		
-					</div>		
-					<div id="rightslope">
-							<form action="#">
-								
-								<div class='loginbox'>
-									<p>GET IN TOUCH WITH US</p>
-									<label for="name">Name&nbsp;</label><br/>
-									<input type="text" name="name"/><br/>
-									<label for="email">Email&nbsp;</label><br/>
-									<input type="email" name="email"/><br/>
+	<head>
+		<style type="text/css">
+
+			body{
+				background: #ecf0f1;
+				margin: 0;
+				font-family: "Ubuntu";
+				font-size: 16px;
+				background: #F4F4F4;
+			}
+			.loader{
+				background: #95a5a6;
+				z-index: 1000;
+				position: fixed;
+				top: 0;
+				left:0;
+				margin-top: -100%;
+				animation:loader 6s;
+				-webkit-animation:loader 6s;
+				-moz-animation:loader 6s;				
+			}
+			.loader #circle{
+
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				background: #fff;
+    			margin-left: auto;
+    			margin-right: auto;
+    			position: absolute;
+ 				top: 50%;
+  				left: 50%;
+  				transform: translate(-50%, -50%);
+				animation:loading 2s infinite;
+				-webkit-animation:loading 2s infinite;
+				-moz-animation:loading 2s infinite;
+			}
+			.header{
+				background: #fff;
+				width: 100%;
+				position: fixed;
+				top: 0;	
+				z-index: 99;
+				border-bottom: #bbb 4px solid;
+			}
+			.header ul{
+				display: block;
+				float: right;
+				padding: 10px;
+				padding-right: 40px;
+				line-height: 16px;
+
+			}
+			.header ul li{
+				display: block;
+				float:left;
+				padding: 10px;
+			}
+			.header ul li a{
+
+				text-decoration: none;
+				color: #34495e;
+			}
+			.header p{
+				line-height: 2.4;
+				color: #34495e;
+				float: left;
+				font-size: 20px;
+				text-transform: uppercase;
+				text-indent: 6%;
+				font-family: "DejaVu Sans Light";
+			}
+			.header p:hover{
+				color: red;
+			}
+
+			section{
+				height: 100%;
+				width: 100%;
+			}
 			
-									<label for="phone">Phone</label><br/>
-									<input type="text" name="phone"/><br/>
-									<label for="message">Message</label><br/>
-									<textarea id="text2" name="message" ></textarea>
- 									<br/>
-									<input type="submit" class="submit"value="Submit" />
+			.contact{
+				height: 10%;
+				font-size: 14px;
+				font-family: "DejaVu Sans Light";
+			}
+			.contact p{
+				float: left;
+				text-indent: 100px;
+				padding-top: 10px;				
+			}
+			.contact ul{
+				float: right;
+				display: block;
+			}
+			.contact ul li{
+				display: block;
+				padding-top: 10px;
+				padding-right:6px;
+				float: left;
+			}
+			.contact h3{
+				padding:0%;
+				font-size:30px;
+				float:right;
+				margin-top:-6%;
+				padding-right:10%;
+				color: #fff;
+			}
+			.team{
+			}
+			.about{
+				background: #fff;
+			}
+			
+			.blog{
+				background: #fff;
+			}
+
+
+			.info{
+				margin-top: 100px;
+				height: 85%;
+			}
+			.info h2{
+				font-size: 54px;
+				font-family: "DejaVu Sans Light";
+				font-weight: 100;
+					position: absolute;
+ 				top: 43%;
+  				left: 50%;
+  				transform: translate(-50%, -50%);
+			}
+			.info h3{
+				font-size: 28px;
+				font-family: "DejaVu Sans Light";
+				font-weight: 100;
+				text-transform: Email @ artdeuppercase;
+				position: absolute;
+ 				top: 53%;
+  				left: 50%;
+  				transform: translate(-50%, -50%);
+			}
+
+			.info #circle-1{
+				border-radius: 50%;
+				opacity: 1;
+				-webkit-animation : enlarge 2s infinite;
+				-moz-animation : enlarge 2s infinite;
+				height: 100px;
+				width: 100px;
+				background: #95A5A6;
+				position: absolute;
+ 				top: 53%;
+  				left: 50%;
+  				transform: translate(-50%, -50%);
+			}
+			.info #circle-2{
+				border-radius: 50%;
+				opacity: 1;
+				-webkit-animation : enlarge 2s infinite;
+				-moz-animation : enlarge 2s infinite;
+				height: 100px;
+				width: 100px;
+				background: #95A5A6;
+				position: absolute;
+ 				top: 53%;
+  				left: 47%;
+  				transform: translate(-50%, -50%);
+			}
+			.info #circle-3{
+				border-radius: 50%;
+				opacity: 1;
+				-webkit-animation : enlarge 2s infinite;
+				-moz-animation : enlarge 2s infinite;
+				height: 100px;
+				width: 100px;
+				background: #95A5A6;
+				position: absolute;
+ 				top: 53%;
+  				left: 53%;
+  				transform: translate(-50%, -50%);
+			}
+
+			.blog h2,.contact h2{
+				font-size: 44px;
+				font-family: "DejaVu Sans Light";
+				font-weight: 100;
+				padding-top: 6%;
+				text-indent: 100px;
+			}
+			.blog p{
+				font-family: "DejaVu Sans Light";
+				font-size: 16px;
+				padding:4%;
+				padding-top: 0%;
+				margin-top: -2%;
+				text-align: justify;
+			}
+			.blog img{
+				float: left;
+				height: 200px;
+				width: 200px;
+				padding: 10px;
+			}
+
+			@-webkit-keyframes enlarge{
+				0%{
+					opacity: 1;
+				}
+				100%{
+					height: 500px;
+					width: 500px;
+					opacity: 0;
+				}
+			}
+			@-webkit-keyframes loading{
+				0%{
+					border-radius: 0%;
+				}
+				50%{
+					border-radius: 50%;
+				}
+				100%{
+					border-radius: 0%;
+				}
+			}
+			@-webkit-keyframes loader{
+				0%{
+					margin-top: 0px;
+				}
+				80%{
+					margin-top: 0px;
+				}
+			}
+
+
+			@-moz-keyframes enlarge{
+				0%{
+					opacity: 1;
+				}
+				100%{
+					height: 500px;
+					width: 500px;
+					opacity: 0;
+				}
+			}
+			@-moz-keyframes loading{
+				0%{
+					border-radius: 0%;
+				}
+				50%{
+					border-radius: 50%;
+				}
+				100%{
+					border-radius: 0%;
+				}
+			}
+			@-moz-keyframes loader{
+				0%{
+					margin-top: 0px;
+				}
+				80%{
+					margin-top: 0px;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
 		
-								</div>	
-							</form>
-					</div>			
-			</div>
-			<div id="footer">
-				<div class="dw_back">
-					<a href="http://dsignerwall.com/css3-placeholder-template/">BACK TO TUTORIAL</a>
-				</div>
-			</div>
-		</body>
-<html>
+		<section class="loader">
+			<div id="circle"></div>
+		</section>
+		<div class="header">
+			<p>maangalabs.com</p>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#blog">BLOG</a></li>
+				<li><a href="#contact">CONTACT US</a></li>
+			</ul>
+
+		</div>
+		<section id="info" class="info">
+			<div id="circle-1"></div>
+			<div id="circle-2"></div>
+			<div id="circle-3"></div>
+			<h2>maangalabs.com</h2>
+			<h3>Experiments with newer web</h3>
+		</section>
+		<section id="blog" class="blog">
+			<h2>BLOG</h2>
+			<p>Checkout at maangalabs.com</p>
+		</section>
+
+		<section id="contact" class="contact" style="background:#3FC380;height:30%">
+			<h2 style="color:#fff;">Contact Us</h2>
+			<h3>Email @ pranavrajs@gmail.com</h3>
+		</section>
+		<section class="contact">
+			<p>All rights reserved &copy; Pranav Raj S S 2014 </p>
+			<ul>
+				<li>Disclaimer |</li>
+				<li>Terms of use |</li>
+				<li>Privacy policy</li>
+			</ul>
+		</section>
+	</body>
+</html>
