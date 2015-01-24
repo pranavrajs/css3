@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html ng-app="MagicApp">
+<head>
+	<title>Dhwani 2015 - Crowd Funding | College of Engineering Trivandrum</title>
+	<meta name="description" content="Dhwani 2015 promises to be a magical journey. It is never easy to articulate a concept of such magnitude, but there are three pillars which form the crux of this mega-event. The first of three pillars - FREEDOM OF EXPRESSION - is an over-used and often misused term and Dhwani 2015 will redefine this cliche bu ushering in a never-before-seen culture. Literary freedom to publish views on a national-level canvas, social freedom to redress burning issues and raise awareness, artistic freedom to exhibit unconventional works and political freedom to openly raise tough questions at political heavyweights." />
+	<meta name="author" content="Pranav Raj S" />
+	<meta property="og:image" content="http://www.cetdhwani.com/media/shareimg.jpg">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		body{
+			width: 100%;
+			font-family: 'Lato', sans-serif;
+			font-weight: 300;
+		}
+		.donation_box{
+			background: #fff;
+			text-align: center;
+			font-family: 'Lato', sans-serif;
+			border-radius: 10px;
+			padding: 20px;
+			font-size: 16px;
+			font-weight: 300;
+		}
+		.donation_box h3{
+			font-weight: 300;
+			font-weight: 29px;
+		}
+		
+		.navbar{
+			margin-bottom: 0;
+		}
+		.pic_container{
+			padding: 9.2% 0;
+			display: block;
+			margin-top: 70px;
+			position: relative;
+		}
+		.pic_container::after {
+		  content: "";
+
+		  background: url('img/body_bg.png') repeat top center #000;
+		  background-size: 100%;
+		  opacity: 0.77;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  right: 0;
+		  position: absolute;
+		  z-index: -1;   
+		}
+		.donate_form{
+			padding: 10px;
+
+			padding-top: 20px;
+		}
+		.magic75nav{
+			background: #fff;
+			border-radius: 0;
+			height: 70px;
+			z-index: 9999;
+		}
+		.logo img{
+			width: 150px;
+		}
+		.logo{
+			padding: 0;
+		}
+		.box label{
+			padding-left: 10px;
+			font-weight: 300;
+			font-family: 'Lato'
+		}
+		.align_center{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.box{
+			padding: 10px;
+		}
+		.donate_button{
+			background: #fecb00;
+			border-color: #fecb00;
+			color: #000;
+			font-size: 25px;
+			padding: 15px;
+			font-weight: 300;
+			
+			margin:10px;
+		}
+		.donate_button_before{
+			background: #fff;
+			border-color: #000;
+			color: #000;
+			font-size: 25px;
+			padding: 15px;
+			font-weight: 400;
+			margin:10px;
+		}
+		.donate_button_before:hover{
+			background: #fecb00;
+			border-color: #fecb00;
+			color: #000;
+			font-size: 25px;
+			padding: 15px;
+			font-weight: 400;
+		}
+		.input_box_donateform{
+			border-radius: 3px;
+			padding: 10px;
+			height: 68px;
+			font-size: 20px;
+			font-size: 
+
+		}
+		.box_magic{
+			padding:6px;
+			margin-bottom: 20px;
+		}
+		.input_box_donateform{
+			text-align: left;
+			padding: 10px;
+		}
+		.input_box_donateform p {
+			padding-top: 5px;
+			font-size: 22px;
+		}
+		.error {
+			padding-top: 2px;
+			color: red;
+		}
+		.content_div{
+			text-align: center;
+			padding-bottom: 70px;
+		}
+		.content_div h2{
+			margin-top: -55px;
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
+			background: #fff;
+			padding: 15px;
+			font-weight: 300;
+			font-size: 25px;	
+			text-transform: uppercase;
+		}
+		.video_div{
+			text-align: center;
+		}
+		.video_div h2{
+			margin-top: -85px;
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
+			background: #eee;
+			padding: 15px;
+			font-weight: 300;
+			font-size: 25px;	
+			text-transform: uppercase;
+
+		}
+		.video_div p{
+			text-align: justify;	
+
+			text-align: justify;
+			margin-top: 10px;
+			font-size: 15px;
+			padding: 10px;
+			padding-bottom:0; 
+			
+			font-weight: 400;
+		}
+		.content_div p{
+			text-align: justify;
+			margin-top: 10px;
+			font-size: 15px;
+			padding: 10px;
+			padding-bottom:0; 
+			
+			font-weight: 400;
+		}
+		#magicDetails{
+			padding: 20px;
+			margin-top: 30px;
+		}
+		.video_div{
+			background: #eee;
+			padding: 30px;
+		}
+		.footer{
+			background: #000;
+			color: #fff;
+			font-size: 12px;
+			padding: 10px;
+			padding-top: 20px; 
+		}
+		.navbar-nav{
+			padding: 10px;
+			text-transform:uppercase;
+		}
+		
+		.navbar-nav li:hover{
+			background: #fecb00;
+		}
+		.buynow{
+			margin-bottom: 20px;
+		}
+	</style>
+</head>	
+<body>
+	<nav class="navbar navbar-default magic75nav navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <a class="navbar-brand logo" href=""><img src="img/logo.png"></a>
+	    </div>
+	    <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
+		    <ul class="nav navbar-nav">
+			    <li id="buy"><a href="#">Buy a share</a></li>
+		    	<li id="magic"><a href="#">Magic 75</a></li>
+		    	<li id="dhwani"><a href="#">Dhwani 15</a></li>
+		    </ul>
+		</div>
+	  </div>
+	</nav>
+	<main class="pic_container" id="#buyashare">
+	  <div class="container">		
+	  <div class="donation_box col-md-12 row">
+	  	
+	  		<h2>Support us to help realize our dreams.</h2>
+	  		<h3>BUY SHARES OF MAGIC 75</h3>
+		  	<form name="donateForm" class="donate_form" ng-controller="MagicSubmission">
+		  		
+		  		<div class="col-md-12 box_magic">
+			  	
+
+			  	
+			  			<button ng-click="changeUrl(1)" class="btn" ng-class="{donate_button : button1 , donate_button_before : !button1}">&#8377; 1000 </button>
+			  			<button ng-click="changeUrl(2)" class="btn" ng-class="{donate_button : button2 , donate_button_before : !button2}">&#8377; 2000 </button>
+			  			<button ng-click="changeUrl(3)" class="btn" ng-class="{donate_button : button3 , donate_button_before : !button3}">&#8377; 3000 </button>
+			  	
+
+		  		</div>
+		  		<div class="col-md-12 buynow">
+		  			<p style="font-size:17px;font-weight:400" ng-if="shares!=0">
+		  				You are buying {{ shares }} share<span ng-if="shares!=1">s</span> of MAGIC 75
+		  			</p>
+		  			<a href="https://www.payumoney.com/paybypayumoney/#/{{link}}" class="btn donate_button">BUY NOW</a>
+		  		</div>
+		  	</form>  	
+	  </div>
+	  </div>
+	</main>
+
+	<div class="content_div" id="magicdetails">
+		<div class="col-md-4 col-md-offset-4">
+		<h2>About MAGIC75</h2>
+		</div>
+		<div class="container">
+			
+			<p>
+				<br>
+				Magic 75 is a project to enhance the quality of our college technically, academically & culturally. The three pillars of this master plan are as given below. </p>
+			<p><strong>
+Technical Aspect</strong> - Despite being widely acclaimed as home to the best brains in the state, the technical know-how of students in our college is below par. <img src="img/ac.jpg" style="width:200px;float:right;padding:15px" />This stems from the fact that our students don't get adequate industry exposure. In comparison with the top colleges in our country, we don't have enough platforms like FOO or Bar Camps to familiarize with the latest technological trends.
+			</p>
+			<p>
+Magic75 solves these problems by setting up a Student Placement Cell & Summer Internship Wing. We have done the initial round of discussions with startups based out of Bangalore to realize this idea. The response we have received so far is overwhelming. Along with this, we will create a conference culture in our college through high-energy discussions, scholarly and researchful sessions on the latest discoveries and technological trends by conducting conferences in the line of DEMO and Startup Festival.
+		</p>
+			<p>
+<strong>
+Academic Aspect</strong> - Its really saddening that the ranking of our college has been depreciating over the last decade. In order to improve the academic ranking of our college, it's important that we have proper infrastructure to back the kind of academic programs we have.
+Magic 75 proposes a fully residential campus, and the first step towards implementing this is to bring about a college mess which provides food to all the students of our college so that each and every student from various hostels and PG's can have a single mess. A giant leap towards fusing many hostels and Paying Guest facilities around college.
+</p>
+			<p>
+<strong>Cultural Aspect</strong> - Campus Radio adds a new dimension to the cultural spectrum of the campus.The promising one of its kind venture is sure to provide as much entertainment value as it adds to the brand CET. The campus radio is aimed to imprint the legacy and culture of this prestigious institution in every CETIAN during their course of four years in this college.<img src="img/clt.jpg" style="width:200px;float:left;padding:15px" />
+Dhwani is perhaps the only omnipotent force that binds every CETIAN together despite several divisiveness. But it is a matter of great dismay that over the past few years Dhwani has not been able to make its mark present among the cultural fests of south India. Magic75 is themed to take Dhwani to its zenith and redeem the long lost glory of our college to assert that south India's first ever engineering college is still the most promising one.
+</p>
+			<p>
+
+<strong>Dhwani 2015</strong>.  One of the biggest cultural festivals in India, Dhwani is College of Engineering Trivandrum (CET)’s pride and prestige. Over the years, it has seen footfall of thousands, attracted the biggest names from all spheres of society and has given sponsoring companies/industries manifold reasons to celebrate.
+</p>
+			<p>
+All said, in 2015, Dhwani is undergoing a paradigm shift. This year, CET celebrates its platinum jubilee and Dhwani-15 will be an event of unparalleled magnitude. This year, Happiness is one of our key pillars, and from street performers and trance DJs, to celebrities judging and performing at late-night concerts, we will be setting standards unheard of. Dhwani-15 will be a reinvention of Freedom- to express, voice, celebrate and revel. Movie screenings, coffee culture and exhibitions coupled with design, food and art fests will whet the appetite of the masses. The biggest novelty of Dhwani-15, Ethics, stems from our desire to give back to society. This Dhwani will be one of purpose. It will be Young India versus the experts, clashing on burning issues like campus politics and women empowerment. Insightful talks, Panel discussions, idea breeding forums, will smash the stereotypes, and lend multiple dimensions to the festivity, setting Dhwani-15 apart from any other college fest.
+</p>
+			<p>
+From the 12th-15th of March, Dhwani-15 will be the place to be. Join hands with us as we celebrate the start of an exciting movement, a brand/culture, an opportunity, the start of a path-making legacy. We promise that Dhwani-15 will delight, and not disappoint. 
+</p>
+			<p>
+<strong>What is a Share of Magic 75? </strong>Magic 75 is a project with a vision, a program with a purpose. We have proposed several projects under this head to realize our dream of finding our way to the top slot of engineering colleges in the country. With our huge alumni pool, funding wouldn't be a hurdle for us students to go another mile with our idea of transforming the college for good. 
+</p>
+			<p>
+<strong>To put things in perspective</strong>. Here's why you should be buying a share. There was a king who told some of his workers to dig a pond. Once the pond was dug, the king made an announcement to his people saying that one person from each household has to bring a glass of milk during the night and pour it into the pond. So, the pond should be full of milk by the morning. After receiving the order, everyone went home. One man prepared to take the milk during the night. He thought that since everyone will bring milk, he could just hide a glass of water and pour inside the pond. Because it will be dark at night, no one will notice. So he quickly went and poured the water in the pond and came back. In the morning, the king came to visit the pond and to his surprise the pond was only filled with water! What has happened is that everyone was thinking like the other man that "I don't have to put the milk, someone else will do it."
+			</p>
+			
+		</div>		
+	</div>
+
+	<div class="video_div" id="dhwanidetails">
+		<div class="col-md-4 col-md-offset-4">
+			<h2>About Dhwani</h2>
+		</div>
+		<div class="container">
+			
+			<p>
+				Dhwani 2015 promises to be a magical journey. It is never easy to articulate a concept of such magnitude, but there are three pillars which form the crux of this mega-event. The first of three pillars - FREEDOM OF EXPRESSION - is an over-used and often misused term and Dhwani 2015 will redefine this cliche bu ushering in a never-before-seen culture. Literary freedom to publish views on a national-level canvas, social freedom to redress burning issues and raise awareness, artistic freedom to exhibit unconventional works and political freedom to openly raise tough questions at political heavyweights.
+</p><p>
+Dhwani 2015 will not just welcome future engineers(or engineering college students?. To-be (future) hipsters, rappers, fashion designers, bureaucrats, theater artists and social activists will connect and revel in their comfort zones. Do what you love, and love what you do, and Dhwani 2015 will be a hotspot for people from all walks of life, who not only find their own space, but feel welcomed into other spaces as well. A street movie screening, sipping coffee on couches, literary as well as audio-video reporting- just glimpses into Dhwani 2015's universe.
+<img style="width:300px;float:left;padding:20px;"src="http://upload.wikimedia.org/wikipedia/commons/1/1a/Showstoppers_in_Dhwani_12.jpg"> 
+Our second pillar, HAPPINESS, like the Happy pages say, will be 4 days at Dhwani 2015. It will be jumping in unison at the booming beats and tunes of late night proshows, chilling with your gang at numerous informal events, and packing your bags not just with memories and smiles but also exciting goodies. It will be taking the funny selfie (with a stranger?), enjoying a pizza/donut and exploring every little event with your best friends. It will not just be winning, but participating, pushing your friends on stage for the fun of it. It will be the euphoria of watching dance troupes light up stages, fashionistas sizzling up the ramps, and bands soulfully strumming right into our hearts.
+</p><p>
+Dhwani 2015 will have all the ingredients of a larger-than-life carnival, with street performers and trance DJ's sending our party crazy youth into delirium.
+</p><p>
+Dhwani 2015 will be a Dhwani of purpose. With thousands of students converging on campus, thousands of ideas, voices and perspectives could also converge if given a proper channel. This brings us to ETHICS-our third and final pillar which seeks to facilitate a Young India idea-breeding platform through workshops, discussions and brainstorming sessions. Young India will voice their beliefs, and eminent experts will stimulate response regarding contemporary issues like campus politics, women empowerment and social awareness. The entrepreneurship wave calls for effective tapping. India needs engineers, doctors, bureaucrats and the musicians, but above all, it needs thinkers. Dhwani-15 will do its bit. An opportunity, a platform, a slice of history which you wouldn't want to miss.
+</p><p>
+Under the huge umbrella of Dhwani 2015, several mini-festivals would add flavor to the festivities. A food festival amalgamating the best tastes of the state, a film festival screening offbeat films, a design festival tailor-made for arts and fashion experts;all of these dotted by several competitions and workshops.
+				</p><p>
+			</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-4">
+				<p style="font-size:13px;">Copyright &copy; Dhwani 2015 - Magic75 Team</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+	
+	<script>
+
+		var magicApp = angular.module('MagicApp',[]);
+
+		magicApp.controller('MagicSubmission', ['$scope', function($scope){
+			
+			$scope.link = "BA8C40612DCE826FEDA61B52EAF51FED";
+			$scope.shares = 0;
+			$scope.button1 = $scope.button2 = $scope.button3 = false;
+			$scope.changeUrl = function(data){
+				console.log(data);
+				$scope.button1 = $scope.button2 = $scope.button3 = false;
+				$scope.shares = data;
+				if(data===1){
+					$scope.button1 = true;
+					$scope.link = "BA8C40612DCE826FEDA61B52EAF51FED";
+				}
+				else if(data === 2){
+					$scope.button2 = true;
+					$scope.link = "5EC3A6D7EAC25CEFF5CE01A70A402323";
+				}
+				else{
+					$scope.button3 = true;
+					$scope.link = "F0CF82C0996F5B40905A6FBFF17A075C";
+				}
+			}
+		}])
+		$.fn.scrollTo = function( target, options, callback ){
+		  if(typeof options == 'function' && arguments.length == 2){ callback = options; options = target; }
+		  var settings = $.extend({
+		    scrollTarget  : target,
+		    offsetTop     : 50,
+		    duration      : 500,
+		    easing        : 'swing'
+		  }, options);
+		  return this.each(function(){
+		    var scrollPane = $(this);
+		    var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
+		    var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top + scrollPane.scrollTop() - parseInt(settings.offsetTop);
+		    scrollPane.animate({scrollTop : scrollY }, parseInt(settings.duration), settings.easing, function(){
+		      if (typeof callback == 'function') { callback.call(this); }
+		    });
+		  });
+		};
+		$(document).ready(function(){
+			$("#magic").click(function(){
+				$('body').scrollTo('#magicdetails');
+			});
+			$("#buy").click(function(){
+				$('body').scrollTo('#buyashare');
+			});
+			$("#dhwani").click(function(){
+				$('body').scrollTo('#dhwanidetails');
+			});
+		})
+		
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58909479-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
