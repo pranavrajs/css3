@@ -17,10 +17,9 @@
 		}
 		.donation_box{
 			background: #fff;
-			text-align: center;
 			font-family: 'Lato', sans-serif;
 			border-radius: 10px;
-			padding: 20px;
+			padding: 15px;
 			font-size: 16px;
 			font-weight: 300;
 		}
@@ -33,16 +32,16 @@
 			margin-bottom: 0;
 		}
 		.pic_container{
-			padding: 9.2% 0;
+			padding: 5.2% 0;
 			display: block;
 			margin-top: 70px;
 			position: relative;
 		}
 		.pic_container::after {
-		  content: "";
+		  contednt: "";
 
 		  background: url('img/body_bg.png') repeat top center #000;
-		  background-size: 100%;
+		  background-size: cover;
 		  opacity: 0.77;
 		  top: 0;
 		  left: 0;
@@ -54,7 +53,7 @@
 		.donate_form{
 			padding: 10px;
 
-			padding-top: 20px;
+			padding-top: 10px;
 		}
 		.magic75nav{
 			background: #fff;
@@ -90,7 +89,7 @@
 			padding: 15px;
 			font-weight: 300;
 			
-			margin:10px;
+			margin:3px;
 		}
 		.donate_button_before{
 			background: #fff;
@@ -99,7 +98,7 @@
 			font-size: 25px;
 			padding: 15px;
 			font-weight: 400;
-			margin:10px;
+			margin: 3px;
 		}
 		.donate_button_before:hover{
 			background: #fecb00;
@@ -118,8 +117,8 @@
 
 		}
 		.box_magic{
-			padding:6px;
-			margin-bottom: 20px;
+			padding:4.6px;
+			padding-top:0;
 		}
 		.input_box_donateform{
 			text-align: left;
@@ -228,19 +227,21 @@
 	  <div class="container">		
 	  <div class="donation_box col-md-12 row">
 	  	
-	  		<h2>Support us to help realize our dreams.</h2>
+	  		<h2>Support us to realize our dreams.</h2>
 	  		<h3>BUY SHARES OF MAGIC 75</h3>
 		  	<form name="donateForm" class="donate_form" ng-controller="MagicSubmission">
 		  		
-		  		<div class="col-md-12 box_magic">
-			  	
-
-			  	
+		  		<div class="col-md-12 box_magic">	  	
+			  			<button ng-click="changeUrl(10)" class="btn" ng-class="{donate_button : button10 , donate_button_before : !button10}">&#8377; 10,000 </button>
+		  		</div>
+		  		<div class="col-md-12 box_magic">	  	
+			  			<button ng-click="changeUrl(8)" class="btn" ng-class="{donate_button : button8 , donate_button_before : !button8}">&#8377; 8000 </button>
+			  			<button ng-click="changeUrl(5)" class="btn" ng-class="{donate_button : button5 , donate_button_before : !button5}">&#8377; 5000 </button>
+		  		</div>
+		  		<div class="col-md-12 box_magic">	  	
 			  			<button ng-click="changeUrl(1)" class="btn" ng-class="{donate_button : button1 , donate_button_before : !button1}">&#8377; 1000 </button>
 			  			<button ng-click="changeUrl(2)" class="btn" ng-class="{donate_button : button2 , donate_button_before : !button2}">&#8377; 2000 </button>
 			  			<button ng-click="changeUrl(3)" class="btn" ng-class="{donate_button : button3 , donate_button_before : !button3}">&#8377; 3000 </button>
-			  	
-
 		  		</div>
 		  		<div class="col-md-12 buynow">
 		  			<p style="font-size:17px;font-weight:400" ng-if="shares!=0">
@@ -339,10 +340,10 @@ Under the huge umbrella of Dhwani 2015, several mini-festivals would add flavor 
 			
 			$scope.link = "BA8C40612DCE826FEDA61B52EAF51FED";
 			$scope.shares = 0;
-			$scope.button1 = $scope.button2 = $scope.button3 = false;
+			$scope.button1 = $scope.button2 = $scope.button3 = $scope.button5 = $scope.button8 = $scope.button10 = false;
 			$scope.changeUrl = function(data){
 				console.log(data);
-				$scope.button1 = $scope.button2 = $scope.button3 = false;
+				$scope.button1 = $scope.button2 = $scope.button3 = $scope.button5 = $scope.button8 = $scope.button10 = false;
 				$scope.shares = data;
 				if(data===1){
 					$scope.button1 = true;
@@ -352,10 +353,23 @@ Under the huge umbrella of Dhwani 2015, several mini-festivals would add flavor 
 					$scope.button2 = true;
 					$scope.link = "5EC3A6D7EAC25CEFF5CE01A70A402323";
 				}
-				else{
+				else if(data === 3){
 					$scope.button3 = true;
 					$scope.link = "F0CF82C0996F5B40905A6FBFF17A075C";
 				}
+				else if(data === 5){
+					$scope.button5 = true;
+					$scope.link = "D02B1587A9375A4F5C2B690362FC440E";
+				}
+				else if(data === 8){
+					$scope.button8 = true;
+					$scope.link = "EE789804BD3E8F5B2FE64E7C8967B7F5";
+				}
+				else if(data === 10){
+					$scope.button10 = true;
+					$scope.link = "0B9C7E42C5AFBBF9185BD9EB31D5831E";
+				}
+				
 			}
 		}])
 		$.fn.scrollTo = function( target, options, callback ){
