@@ -81,31 +81,30 @@ include'header.php';
                   </td>
                   <td>
                     <?php
-                      $tot= 2 * $res['ccredit'] + $cocgp;
-                      $div= 2 * + $res['cocredit'];
+                      $tot = 2 * 64 * $res['ccgpa'] + 16 * $res['cocgpa'];
+                      $div = 144;
                       $ii = $tot / $div;
                       echo round($ii , 2);
                     ?>
                   </td>
                   <td>
                     <?php
-                      if($res['uty']==1)
+                      $gs = 0;
+                      if($res['uty'] == 1)
                         $gs = $ii * 0.1;
-                      else
-                        $gs = 0;
                       echo round($gs, 2);
                     ?>
                   </td>
                   <td>
                     <?php
                       if($res['nss']==0)
-                        $nss=0;
+                        $nss = 0;
                       elseif($res['nss']==1)
                         $nss = 0.1;
                       elseif($res['nss']==2)
                         $nss = 0.15;
                       elseif($res['nss']==3)
-                        $nss =0.2;
+                        $nss = 0.2;
                       echo $nss;
                     ?>
                   </td>
