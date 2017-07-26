@@ -52,17 +52,17 @@ include'header.php';
                   <td>
                     <?php
                     if($res['caste']==1)
-                    echo "General";
+                      echo "General";
                     elseif($res['caste']==2)
-                    echo "OBC";
+                      echo "OBC";
                     elseif($res['caste']==3)
-                    echo "OEC";
+                      echo "OEC";
                     elseif($res['caste']==4)
-                    echo "SC";
+                      echo "SC";
                     elseif($res['caste']==5)
-                    echo "ST";
+                      echo "ST";
                     else
-                    echo "No data";
+                      echo "No data";
                     ?>
                   </td>
                   <td><?php echo $res['ccredit'];?></td>
@@ -81,41 +81,51 @@ include'header.php';
                   </td>
                   <td>
                     <?php
-                    $tot=2*$ccgp+$cocgp;
-                    $div=2*$res['ccredit']+$res['cocredit'];
-                    $ii = $tot / $div;
-                    echo round($ii , 2);
+                      $tot= 2 * $res['ccredit'] + $cocgp;
+                      $div= 2 * + $res['cocredit'];
+                      $ii = $tot / $div;
+                      echo round($ii , 2);
                     ?>
                   </td>
-                  <td><?php
-                  if($res['uty']==1)
-                  $gs = $ii*0.1;
-                  else
-                  $gs = 0; echo round($gs,2);?></td>
-                  <td><?php if($res['nss']==0)
-                  $nss=0;
-                  elseif($res['nss']==1)
-                  $nss = 0.1;
-                  elseif($res['nss']==2)
-                  $nss = 0.15;
-                  elseif($res['nss']==3)
-                  $nss =0.2;
-                  echo $nss;
-                  ?></td>
-                  <td><?php if($res['hs']==1)
-                  $hs = 0;
-                  elseif($res['hs']==2)
-                  $hs = 0.1;
-                  elseif($res['hs']==3)
-                  $hs= 0.2;
-                  else
-                  $hs = 0.25;
-                  echo $hs;
-                  ?></td>
+                  <td>
+                    <?php
+                      if($res['uty']==1)
+                        $gs = $ii * 0.1;
+                      else
+                        $gs = 0;
+                      echo round($gs, 2);
+                    ?>
+                  </td>
+                  <td>
+                    <?php
+                      if($res['nss']==0)
+                        $nss=0;
+                      elseif($res['nss']==1)
+                        $nss = 0.1;
+                      elseif($res['nss']==2)
+                        $nss = 0.15;
+                      elseif($res['nss']==3)
+                        $nss =0.2;
+                      echo $nss;
+                    ?>
+                  </td>
+                  <td>
+                    <?php
+                    if($res['hs']==1)
+                      $hs = 0;
+                    elseif($res['hs']==2)
+                      $hs = 0.1;
+                    elseif($res['hs']==3)
+                      $hs= 0.2;
+                    else
+                      $hs = 0.25;
+                    echo $hs;
+                    ?>
+                  </td>
                   <td><?php $fs = $ii + $gs + $nss - $hs; echo round($fs, 2);?></td>
-            </tr>
+                </tr>
             <?php
-            $i++;
+              $i++;
           }
         }
       }
