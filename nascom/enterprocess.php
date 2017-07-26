@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 
   $fs = $ii + $gs + $nss2 - $hs2;
 
-  $query = "INSERT INTO data (appno,name,ccredit,ccgpa,cocredit,cocgpa,nss,hs,uty,fs,caste) VALUES (".$appno.",'".$name."',62,".$ccgpa.",16,".$cocgpa.",".$nss.",".$hs.",".$uty.",".$fs.",".$caste.")";
+  $query = "INSERT INTO data (appno,name,ccredit,ccgpa,cocredit,cocgpa,nss,hs,uty,fs,caste) VALUES (".$appno.",'".$name."',64,".$ccgpa.",16,".$cocgpa.",".$nss.",".$hs.",".$uty.",".$fs.",".$caste.")";
 
   $result = mysql_query($query) or die(mysql_error());
   if ($result) {
