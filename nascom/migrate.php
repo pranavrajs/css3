@@ -51,7 +51,7 @@ if($result) {
 
       $fs = $ii + $gs + $nss2 - $hs2;
 
-      $query = "UPDATE data SET (fs) VALUES (".$fs.") WHERE id = ".$id;
+      $query = "UPDATE data SET fs = ".$fs." WHERE id = ".$id;
 
       $result = mysql_query($query) or die(mysql_error());
     }
