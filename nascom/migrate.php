@@ -7,17 +7,17 @@ $result = mysql_query($query) or die(mysql_error());
 if($result) {
   $num = mysql_num_rows($result);
   if ($num) {
+    $queryArr = array();
     while( $res = mysql_fetch_array($result) ) {
-
       $id = $res['id'];
       $appno = $res['appno'];
       $name = $res['name'];
       $ccgpa = $res['ccgpa'];
       $cocgpa = $res['cocgpa'];
-      $nss = $_POST['ncc'];
-      $hs= $_POST['hs'];
-      $uty = $_POST['uty'];
-      $caste = $_POST['caste'];
+      $nss = $res['ncc'];
+      $hs= $res['hs'];
+      $uty = $res['uty'];
+      $caste = $res['caste'];
 
       //Calculation
 
@@ -50,10 +50,12 @@ if($result) {
       }
 
       $fs = $ii + $gs + $nss2 - $hs2;
-
-      $query = "UPDATE data SET fs = ".$fs." WHERE id = ".$id;
-
-      $result = mysql_query($query) or die(mysql_error());
+      $fs = round($fs, 2);
+      $query = "UPDATE data SET fs = ".$fs." WHERE id = ".$id.";";
+      array_push($queryArr, $query);
+    }
+    for ($i = 0; $i < count($queryArr); $i++) {
+      $result = mysql_query($queryArr[$i]) or die(mysql_error());
     }
   }
 }
